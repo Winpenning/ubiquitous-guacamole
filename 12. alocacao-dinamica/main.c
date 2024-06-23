@@ -18,18 +18,17 @@ void main(){
 
     printf("&array_malloc = %p | array_malloc = %p (aqui ja estamos na posicao do primeiro elemento na heap)",&array_malloc,array_malloc);
 
-    for(int i = 0; i < sizeof(array_malloc) + 1; i++ ){
+    for(int i = 0; i < 5; i++ ){
         printf("\n &array_malloc[%d] = %p | array_malloc[%d] = %d", i, &array_malloc[i], i,array_malloc[i]);
     }
 
     puts("\n");
 
-    puts("####### VETOR ALOCADO DINAMICAMENTE (calloc) #######");
     int *array_calloc = (int*)calloc(5,sizeof(int));
 
     printf("&array_calloc = %p | array_calloc = %p (aqui ja estamos na posicao do primeiro elemento na heap)",&array_calloc,array_calloc);
 
-    for(int i = 0; i < sizeof(array_calloc) + 1; i++ ){
+    for(int i = 0; i < 5; i++ ){
         printf("\n &array_calloc[%d] = %p | array_calloc[%d] = %d", i, &array_calloc[i], i,array_calloc[i]);
     }
 }
